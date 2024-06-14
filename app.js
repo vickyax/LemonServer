@@ -12,12 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api/v1", mainRouter);
-app.use(express.static(path.join(__dirname, 'client', 'dist')));
 
-// Fallback route to serve index.html for all other routes
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'));
-});
 app.use('/uploads', express.static('uploads'));
 
 const port = 3000;
