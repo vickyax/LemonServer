@@ -4,11 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "client": "npm run dev --prefix client",
-    "dev": "concurrently \"npm run start\" \"npm run client\"",
-    "build": "npm install --prefix client && npm run build --prefix client",
-    "deploy": "npm run build && npm run start"
+    "start": "node app.js"
   },
   "author": "vicky",
   "license": "ISC",
