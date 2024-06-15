@@ -1,5 +1,0 @@
-[[redirects]]
-  from = "/api/v1"
-  to = "https://lemonservernetlify.netlify.app/api/v1/gregister"
-  headers = {Access-Control-Allow-Origin = "http://localhost:5173", Access-Control-Allow-Methods = "GET, POST, PUT, DELETE, OPTIONS"}
-  status = 200
