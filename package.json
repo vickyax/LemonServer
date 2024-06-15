@@ -1,14 +1,19 @@
 {
   "name": "lemon-berry",
   "version": "1.0.0",
-  "description": "Backend server for Lemon-Berry application",
+  "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run start\" \"npm run client\"",
+    "build": "npm install --prefix client && npm run build --prefix client",
+    "deploy": "npm run build && npm run start"
   },
   "author": "vicky",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.6.3",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
@@ -17,11 +22,10 @@
     "google-auth-library": "^9.10.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.0.3",
-    "multer": "^1.4.5-lts.1"
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.1.3"
   },
   "devDependencies": {
-    "eslint": "^8.55.0",
-    "eslint-plugin-react": "^7.33.2",
-    "eslint-plugin-react-hooks": "^4.6.0"
+    "concurrently": "^8.2.2"
   }
 }
